@@ -1,3 +1,4 @@
+
 // // Function to display coursescourses
 // function displayCourses(courses) {
 //   const courseListContainer = document.getElementById("courseList");
@@ -55,6 +56,7 @@ async function displayCourses() {
     courseListContainer.innerHTML = ""; // Clear previous content
 
     courses.forEach(course => {
+
       const courseCard = document.createElement("div");
       courseCard.classList.add("course-card");
 
@@ -76,11 +78,15 @@ async function displayCourses() {
       courseCard.appendChild(instructorElem);
 
       courseListContainer.appendChild(courseCard);
+
     });
   } catch (error) {
     console.error('Error fetching courses:', error);
+
   }
 }
 
 // Call the function to fetch and display courses from the API
+
 displayCourses();
+
